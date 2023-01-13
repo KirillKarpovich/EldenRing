@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFAD297159F2000FACDB /* AppDelegate.swift */; };
+		688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFAF297159F2000FACDB /* SceneDelegate.swift */; };
+		688ABFB2297159F2000FACDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFB1297159F2000FACDB /* ViewController.swift */; };
+		688ABFB8297159F2000FACDB /* EldenRing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFB6297159F2000FACDB /* EldenRing.xcdatamodeld */; };
+		688ABFBA297159F4000FACDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688ABFB9297159F4000FACDB /* Assets.xcassets */; };
+		688ABFBD297159F4000FACDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688ABFBB297159F4000FACDB /* LaunchScreen.storyboard */; };
+		688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFC829715E6A000FACDB /* NetworkManager.swift */; };
+		688ABFCC29715EAF000FACDB /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCB29715EAF000FACDB /* Boss.swift */; };
+		688ABFCF29716107000FACDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCE29716107000FACDB /* Constants.swift */; };
+		688ABFD129716942000FACDB /* BossesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD029716942000FACDB /* BossesResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		688ABFAA297159F2000FACDB /* EldenRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		688ABFAD297159F2000FACDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		688ABFAF297159F2000FACDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		688ABFB1297159F2000FACDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		688ABFB7297159F2000FACDB /* EldenRing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EldenRing.xcdatamodel; sourceTree = "<group>"; };
+		688ABFB9297159F4000FACDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		688ABFBC297159F4000FACDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		688ABFBE297159F4000FACDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688ABFC829715E6A000FACDB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		688ABFCB29715EAF000FACDB /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
+		688ABFCE29716107000FACDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		688ABFD029716942000FACDB /* BossesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossesResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		688ABFA7297159F2000FACDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		688ABFA1297159F2000FACDB = {
+			isa = PBXGroup;
+			children = (
+				688ABFAC297159F2000FACDB /* EldenRing */,
+				688ABFAB297159F2000FACDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		688ABFAB297159F2000FACDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFAA297159F2000FACDB /* EldenRing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		688ABFAC297159F2000FACDB /* EldenRing */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFCD297160F8000FACDB /* Helpers */,
+				688ABFCA29715E93000FACDB /* Models */,
+				688ABFC729715E54000FACDB /* Network */,
+				688ABFC429715A12000FACDB /* App */,
+				688ABFC629715E43000FACDB /* Controllers */,
+				688ABFC529715A34000FACDB /* Resources */,
+			);
+			path = EldenRing;
+			sourceTree = "<group>";
+		};
+		688ABFC429715A12000FACDB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFAD297159F2000FACDB /* AppDelegate.swift */,
+				688ABFAF297159F2000FACDB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		688ABFC529715A34000FACDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFBE297159F4000FACDB /* Info.plist */,
+				688ABFB9297159F4000FACDB /* Assets.xcassets */,
+				688ABFBB297159F4000FACDB /* LaunchScreen.storyboard */,
+				688ABFB6297159F2000FACDB /* EldenRing.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		688ABFC629715E43000FACDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFB1297159F2000FACDB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		688ABFC729715E54000FACDB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFC829715E6A000FACDB /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		688ABFCA29715E93000FACDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFCB29715EAF000FACDB /* Boss.swift */,
+				688ABFD029716942000FACDB /* BossesResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		688ABFCD297160F8000FACDB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFCE29716107000FACDB /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		688ABFA9297159F2000FACDB /* EldenRing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 688ABFC1297159F4000FACDB /* Build configuration list for PBXNativeTarget "EldenRing" */;
+			buildPhases = (
+				688ABFA6297159F2000FACDB /* Sources */,
+				688ABFA7297159F2000FACDB /* Frameworks */,
+				688ABFA8297159F2000FACDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EldenRing;
+			productName = EldenRing;
+			productReference = 688ABFAA297159F2000FACDB /* EldenRing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		688ABFA2297159F2000FACDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					688ABFA9297159F2000FACDB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 688ABFA5297159F2000FACDB /* Build configuration list for PBXProject "EldenRing" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 688ABFA1297159F2000FACDB;
+			productRefGroup = 688ABFAB297159F2000FACDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				688ABFA9297159F2000FACDB /* EldenRing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		688ABFA8297159F2000FACDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				688ABFBD297159F4000FACDB /* LaunchScreen.storyboard in Resources */,
+				688ABFBA297159F4000FACDB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		688ABFA6297159F2000FACDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				688ABFB2297159F2000FACDB /* ViewController.swift in Sources */,
+				688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */,
+				688ABFCC29715EAF000FACDB /* Boss.swift in Sources */,
+				688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */,
+				688ABFCF29716107000FACDB /* Constants.swift in Sources */,
+				688ABFD129716942000FACDB /* BossesResponse.swift in Sources */,
+				688ABFB8297159F2000FACDB /* EldenRing.xcdatamodeld in Sources */,
+				688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		688ABFBB297159F4000FACDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				688ABFBC297159F4000FACDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		688ABFBF297159F4000FACDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		688ABFC0297159F4000FACDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		688ABFC2297159F4000FACDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EldenRing/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "K.K.-Inc.EldenRing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		688ABFC3297159F4000FACDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EldenRing/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "K.K.-Inc.EldenRing";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		688ABFA5297159F2000FACDB /* Build configuration list for PBXProject "EldenRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				688ABFBF297159F4000FACDB /* Debug */,
+				688ABFC0297159F4000FACDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		688ABFC1297159F4000FACDB /* Build configuration list for PBXNativeTarget "EldenRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				688ABFC2297159F4000FACDB /* Debug */,
+				688ABFC3297159F4000FACDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		688ABFB6297159F2000FACDB /* EldenRing.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				688ABFB7297159F2000FACDB /* EldenRing.xcdatamodel */,
+			);
+			currentVersion = 688ABFB7297159F2000FACDB /* EldenRing.xcdatamodel */;
+			path = EldenRing.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 688ABFA2297159F2000FACDB /* Project object */;
+}
