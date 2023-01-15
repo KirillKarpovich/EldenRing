@@ -17,6 +17,9 @@
 		688ABFCC29715EAF000FACDB /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCB29715EAF000FACDB /* Boss.swift */; };
 		688ABFCF29716107000FACDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCE29716107000FACDB /* Constants.swift */; };
 		688ABFD129716942000FACDB /* BossesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD029716942000FACDB /* BossesResponse.swift */; };
+		688ABFD629718306000FACDB /* BossCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD529718306000FACDB /* BossCV.swift */; };
+		688ABFD829718B42000FACDB /* BossCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */; };
+		68A079CE2973FE48001FEE97 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A079CD2973FE48001FEE97 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		688ABFCB29715EAF000FACDB /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		688ABFCE29716107000FACDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		688ABFD029716942000FACDB /* BossesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossesResponse.swift; sourceTree = "<group>"; };
+		688ABFD529718306000FACDB /* BossCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossCV.swift; sourceTree = "<group>"; };
+		688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossCollectionViewCell.swift; sourceTree = "<group>"; };
+		68A079CD2973FE48001FEE97 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +70,12 @@
 		688ABFAC297159F2000FACDB /* EldenRing */ = {
 			isa = PBXGroup;
 			children = (
-				688ABFCD297160F8000FACDB /* Helpers */,
-				688ABFCA29715E93000FACDB /* Models */,
 				688ABFC729715E54000FACDB /* Network */,
-				688ABFC429715A12000FACDB /* App */,
+				688ABFCA29715E93000FACDB /* Models */,
+				688ABFD2297182B2000FACDB /* VIews */,
 				688ABFC629715E43000FACDB /* Controllers */,
+				688ABFCD297160F8000FACDB /* Helpers */,
+				688ABFC429715A12000FACDB /* App */,
 				688ABFC529715A34000FACDB /* Resources */,
 			);
 			path = EldenRing;
@@ -106,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				688ABFC829715E6A000FACDB /* NetworkManager.swift */,
+				68A079CD2973FE48001FEE97 /* CacheManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -125,6 +133,15 @@
 				688ABFCE29716107000FACDB /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		688ABFD2297182B2000FACDB /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				688ABFD529718306000FACDB /* BossCV.swift */,
+				688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */,
+			);
+			path = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +218,13 @@
 				688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */,
 				688ABFCC29715EAF000FACDB /* Boss.swift in Sources */,
 				688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */,
+				688ABFD629718306000FACDB /* BossCV.swift in Sources */,
 				688ABFCF29716107000FACDB /* Constants.swift in Sources */,
+				68A079CE2973FE48001FEE97 /* CacheManager.swift in Sources */,
 				688ABFD129716942000FACDB /* BossesResponse.swift in Sources */,
 				688ABFB8297159F2000FACDB /* EldenRing.xcdatamodeld in Sources */,
 				688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */,
+				688ABFD829718B42000FACDB /* BossCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
