@@ -19,18 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        titleLabel.text = "Elden Ring"
-        titleLabel.textAlignment = .center
-        titleLabel.sizeToFit()
-        titleLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        self.navigationItem.titleView = titleLabel
-        
-//        title = "Elden ring"
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.backgroundColor = .gray
 
         view.backgroundColor = .gray
+        
         networkManager.getData(page: 1) { data in
             DispatchQueue.main.async { [weak self] in
                 self?.bosses = data
@@ -44,6 +35,12 @@ class ViewController: UIViewController {
     func setupViews() {
         bossCV.dataSource = self
         bossCV.delegate = self
+        
+        titleLabel.text = "Elden Ring"
+        titleLabel.textAlignment = .center
+        titleLabel.sizeToFit()
+        titleLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        self.navigationItem.titleView = titleLabel
         
         bossLabel.text = "Main Bosses"
         bossLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -87,5 +84,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         
         cell.configure(with: boss)
         return cell        
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.nameLabel.text = self.bosses[indexPath.row].name
+//        UIImage(data: <#T##Data#>)
+        let cell = collectionView.cellForItem(at: indexPath) as? BossCollectionViewCell
+        vc.imageViewDetail.image = cell?.imageView.image
+        vc.descriptionText.text = self.bosses[indexPath.row].description
+        
+        present(vc, animated: true)
     }
 }

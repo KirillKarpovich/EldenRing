@@ -12,8 +12,11 @@ class BossCollectionViewCell: UICollectionViewCell {
     static let identifier = String(describing: BossCollectionViewCell.self)
     private let containerView = UIView()
     private let layout = UICollectionViewFlowLayout()
-    private let imageView = UIImageView()
+    let imageView = UIImageView()
     private let nameLabel = UILabel()
+    
+    private var currentImageUrl: String?
+    private var dataTask: URLSessionDataTask?
     
     
     override init(frame: CGRect) {
@@ -59,38 +62,45 @@ class BossCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = nil 
+        imageView.image = nil
+        dataTask?.cancel()
+        
     }
     
     
     func configure(with boss: Boss) {
-        
         nameLabel.text = boss.name
-
-        if let cachedData = CacheManager.getVideoCache(boss.image ?? "https://eldenring.fanapis.com/i mages/bosses/17f69b4ba0al0i1uk6s98t1nbtxunt.png") {
-            
-            imageView.image = UIImage(data: cachedData)
+        
+        if let cachedData = CacheManager.getPhotoCache(boss.image ?? "https://eldenring.fanapis.com/images/bosses/17f69b4ba0al0i1uk6s98t1nbtxunt.png") {
+            self.imageView.image = UIImage(data: cachedData)
+            return
         }
         
         let url = URL(string: boss.image ?? "https://eldenring.fanapis.com/images/bosses/17f69b4ba0al0i1uk6s98t1nbtxunt.png")
         
+        if currentImageUrl == url?.absoluteString {
+            return
+        } else {
+            currentImageUrl = url?.absoluteString
+        }
+        
         let session = URLSession.shared
         
-        session.dataTask(with: url!) { data, response, error in
+        dataTask = session.dataTask(with: url!) { [weak self] data, response, error in
+            guard let self = self, error == nil, let data = data, url?.absoluteString == self.currentImageUrl else { return }
             
-            if error == nil && data != nil {
-                
-                CacheManager.setVideoCache(url!.absoluteString, data)
-                
-                if url!.absoluteString != boss.image {
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    let image = UIImage(data: data!)
-                    self.imageView.image = image
-                }
+            CacheManager.setPhotoCache(url!.absoluteString, data)
+            
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                self.imageView.image = image
             }
-        }.resume()
+        }
+        dataTask?.resume()
     }
 }
+
+
+
+
+

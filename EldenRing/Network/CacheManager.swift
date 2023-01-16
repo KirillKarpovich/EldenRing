@@ -11,13 +11,13 @@ class CacheManager {
     
     static var cache = [String:Data]()
     
-    static func setVideoCache(_ url:String, _ data:Data?) {
+    static func setPhotoCache(_ url:String, _ data:Data?) {
         
         // Store the image data and use the url as the key
         cache[url] = data
     }
     
-    static func getVideoCache(_ url:String) -> Data? {
+    static func getPhotoCache(_ url:String) -> Data? {
         
         // Try to get a data to the specified url
         return cache[url]

@@ -20,6 +20,9 @@
 		688ABFD629718306000FACDB /* BossCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD529718306000FACDB /* BossCV.swift */; };
 		688ABFD829718B42000FACDB /* BossCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */; };
 		68A079CE2973FE48001FEE97 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A079CD2973FE48001FEE97 /* CacheManager.swift */; };
+		68A079D029743790001FEE97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A079CF29743790001FEE97 /* DetailViewController.swift */; };
+		68A079D229758A06001FEE97 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A079D129758A06001FEE97 /* FavoriteViewController.swift */; };
+		68A079D429758A4D001FEE97 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A079D329758A4D001FEE97 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		688ABFD529718306000FACDB /* BossCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossCV.swift; sourceTree = "<group>"; };
 		688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossCollectionViewCell.swift; sourceTree = "<group>"; };
 		68A079CD2973FE48001FEE97 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		68A079CF29743790001FEE97 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		68A079D129758A06001FEE97 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		68A079D329758A4D001FEE97 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				688ABFB1297159F2000FACDB /* ViewController.swift */,
+				68A079CF29743790001FEE97 /* DetailViewController.swift */,
+				68A079D129758A06001FEE97 /* FavoriteViewController.swift */,
+				68A079D329758A4D001FEE97 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,12 +226,15 @@
 				688ABFB2297159F2000FACDB /* ViewController.swift in Sources */,
 				688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */,
 				688ABFCC29715EAF000FACDB /* Boss.swift in Sources */,
+				68A079D029743790001FEE97 /* DetailViewController.swift in Sources */,
 				688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */,
 				688ABFD629718306000FACDB /* BossCV.swift in Sources */,
 				688ABFCF29716107000FACDB /* Constants.swift in Sources */,
 				68A079CE2973FE48001FEE97 /* CacheManager.swift in Sources */,
 				688ABFD129716942000FACDB /* BossesResponse.swift in Sources */,
+				68A079D229758A06001FEE97 /* FavoriteViewController.swift in Sources */,
 				688ABFB8297159F2000FACDB /* EldenRing.xcdatamodeld in Sources */,
+				68A079D429758A4D001FEE97 /* TabBarController.swift in Sources */,
 				688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */,
 				688ABFD829718B42000FACDB /* BossCollectionViewCell.swift in Sources */,
 			);
