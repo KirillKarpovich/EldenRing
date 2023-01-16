@@ -32,6 +32,7 @@ class BossCV: UICollectionView, UICollectionViewDelegateFlowLayout {
             forCellWithReuseIdentifier: BossCollectionViewCell.identifier
         )
         self.backgroundColor = .gray
+        self.showsHorizontalScrollIndicator = false
 //        layout.estimatedItemSize = CGSize(width: 120, height: 120)
         layout.scrollDirection = .horizontal
         
