@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let bossLabel = UILabel()
     let titleLabel = UILabel()
 
+    weak var favoritesDelegate: FavoritesDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,17 +83,35 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         }
         let boss = bosses[indexPath.row]
         
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(like), for: .touchUpInside)
         cell.configure(with: boss)
-        return cell        
+        
+        
+        return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = DetailViewController()
+        
         vc.nameLabel.text = self.bosses[indexPath.row].name
-//        UIImage(data: <#T##Data#>)
+        
         let cell = collectionView.cellForItem(at: indexPath) as? BossCollectionViewCell
+        
         vc.imageViewDetail.image = cell?.imageView.image
         vc.descriptionText.text = self.bosses[indexPath.row].description
         
+        //        favoritesDelegate?.appendItem(bosses[indexPath.row])
+        
+        
         present(vc, animated: true)
+    }
+    @objc func like(sender: UIButton) {
+        if sender.backgroundImage(for: .normal) == UIImage(systemName: "heart") {
+            favoritesDelegate?.appendItem(bosses[sender.tag])
+            sender.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            favoritesDelegate?.removeItem(bosses[sender.tag])
+            sender.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
 }
