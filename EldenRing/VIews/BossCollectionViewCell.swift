@@ -10,10 +10,11 @@ import UIKit
 class BossCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: BossCollectionViewCell.self)
-    private let containerView = UIView()
+//    private let containerView = UIView()
     private let layout = UICollectionViewFlowLayout()
     let imageView = UIImageView()
     private let nameLabel = UILabel()
+    let likeButton = UIButton()
     
     private var currentImageUrl: String?
     private var dataTask: URLSessionDataTask?
@@ -37,6 +38,7 @@ class BossCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(imageView)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(likeButton)
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -45,6 +47,14 @@ class BossCollectionViewCell: UICollectionViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = .white
         
+       
+        likeButton.translatesAutoresizingMaskIntoConstraints = false
+        likeButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+        likeButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .highlighted)
+
+        likeButton.contentMode = .scaleToFill
+      
+      
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -58,18 +68,26 @@ class BossCollectionViewCell: UICollectionViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
+        NSLayoutConstraint.activate([
+            likeButton.heightAnchor.constraint(equalToConstant: 40),
+            likeButton.widthAnchor.constraint(equalToConstant: 40),
+            likeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+//            likeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            likeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+        ])
+  
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
         dataTask?.cancel()
-        
     }
     
     
     func configure(with boss: Boss) {
-        nameLabel.text = boss.name
+        nameLabel.text = boss.name        
+        
         
         if let cachedData = CacheManager.getPhotoCache(boss.image ?? "https://eldenring.fanapis.com/images/bosses/17f69b4ba0al0i1uk6s98t1nbtxunt.png") {
             self.imageView.image = UIImage(data: cachedData)
@@ -98,6 +116,7 @@ class BossCollectionViewCell: UICollectionViewCell {
         }
         dataTask?.resume()
     }
+
 }
 
 

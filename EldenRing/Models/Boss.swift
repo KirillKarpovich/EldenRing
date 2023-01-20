@@ -2,13 +2,12 @@
 //  Boss.swift
 //  EldenRing
 //
-//  Created by Kirill Karpovich on 13.01.23.
+//  Created by Kirill Karpovich on 20.01.23.
 //
 
 import Foundation
 
-
-struct Boss: Decodable {
+struct Boss: Decodable, Equatable {
     
     let name: String
     let image: String?
@@ -16,4 +15,3 @@ struct Boss: Decodable {
     let location: String
 
 }
-

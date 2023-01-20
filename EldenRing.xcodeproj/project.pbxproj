@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681B576F297AB78F009FA91B /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681B576E297AB78F009FA91B /* Boss.swift */; };
+		681B5771297ABE37009FA91B /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681B5770297ABE37009FA91B /* FavTableViewCell.swift */; };
 		688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFAD297159F2000FACDB /* AppDelegate.swift */; };
 		688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFAF297159F2000FACDB /* SceneDelegate.swift */; };
 		688ABFB2297159F2000FACDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFB1297159F2000FACDB /* ViewController.swift */; };
@@ -14,7 +16,6 @@
 		688ABFBA297159F4000FACDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688ABFB9297159F4000FACDB /* Assets.xcassets */; };
 		688ABFBD297159F4000FACDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688ABFBB297159F4000FACDB /* LaunchScreen.storyboard */; };
 		688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFC829715E6A000FACDB /* NetworkManager.swift */; };
-		688ABFCC29715EAF000FACDB /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCB29715EAF000FACDB /* Boss.swift */; };
 		688ABFCF29716107000FACDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFCE29716107000FACDB /* Constants.swift */; };
 		688ABFD129716942000FACDB /* BossesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD029716942000FACDB /* BossesResponse.swift */; };
 		688ABFD629718306000FACDB /* BossCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688ABFD529718306000FACDB /* BossCV.swift */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		681B576E297AB78F009FA91B /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
+		681B5770297ABE37009FA91B /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		688ABFAA297159F2000FACDB /* EldenRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688ABFAD297159F2000FACDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		688ABFAF297159F2000FACDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		688ABFBC297159F4000FACDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688ABFBE297159F4000FACDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688ABFC829715E6A000FACDB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		688ABFCB29715EAF000FACDB /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		688ABFCE29716107000FACDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		688ABFD029716942000FACDB /* BossesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossesResponse.swift; sourceTree = "<group>"; };
 		688ABFD529718306000FACDB /* BossCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossCV.swift; sourceTree = "<group>"; };
@@ -130,8 +132,8 @@
 		688ABFCA29715E93000FACDB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				688ABFCB29715EAF000FACDB /* Boss.swift */,
 				688ABFD029716942000FACDB /* BossesResponse.swift */,
+				681B576E297AB78F009FA91B /* Boss.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 			children = (
 				688ABFD529718306000FACDB /* BossCV.swift */,
 				688ABFD729718B42000FACDB /* BossCollectionViewCell.swift */,
+				681B5770297ABE37009FA91B /* FavTableViewCell.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -225,7 +228,7 @@
 			files = (
 				688ABFB2297159F2000FACDB /* ViewController.swift in Sources */,
 				688ABFAE297159F2000FACDB /* AppDelegate.swift in Sources */,
-				688ABFCC29715EAF000FACDB /* Boss.swift in Sources */,
+				681B576F297AB78F009FA91B /* Boss.swift in Sources */,
 				68A079D029743790001FEE97 /* DetailViewController.swift in Sources */,
 				688ABFC929715E6A000FACDB /* NetworkManager.swift in Sources */,
 				688ABFD629718306000FACDB /* BossCV.swift in Sources */,
@@ -237,6 +240,7 @@
 				68A079D429758A4D001FEE97 /* TabBarController.swift in Sources */,
 				688ABFB0297159F2000FACDB /* SceneDelegate.swift in Sources */,
 				688ABFD829718B42000FACDB /* BossCollectionViewCell.swift in Sources */,
+				681B5771297ABE37009FA91B /* FavTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
